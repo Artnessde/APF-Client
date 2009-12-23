@@ -1,0 +1,95 @@
+	#MailBox {
+		display: block;
+		white-space: nowrap;
+	}
+
+	.apf-tree .hidden {
+		display: none;
+	}
+
+	.apf-tree ul {
+		margin: 0px;
+		padding: 0px;
+		display: block;
+	}
+
+	.apf-tree li {
+		padding-left: 12px;
+		display: block;
+	}
+
+	.apf-tree li.over {
+		background: none;
+		XXbackground: transparent url('../images/tree/folder_over.gif') no-repeat 0px 0px;
+	}
+
+	.apf-tree a,
+	.apf-tree a span {
+		line-height: 21px;
+		display: block;
+		margin: 0px;
+		padding: 0px;
+		background-color: transparent;
+		color: #405070;
+		outline: 0;
+	}
+
+	.apf-tree a span {
+		top: 0;
+		right: 0;
+		padding-left: 28px;
+		padding-right: 4px;
+		display: block;
+		white-space: nowrap;
+	}
+
+	.apf-tree span.over {
+		color: #129cc6 !important;
+		background: none;
+		XXbackground: transparent url('../images/tree/folder_over.gif') no-repeat top right;
+	}
+
+	.apf-tree .folder {
+		background: transparent url('../images/tree/folders.gif') no-repeat 0px 1px;
+	}
+
+	.apf-tree .folder.over {
+		background: transparent url('../images/tree/folders.gif') no-repeat 0px 1px;
+	}
+
+	.apf-tree .folder.close {
+		background: transparent url('../images/tree/folders.gif') no-repeat 0px -19px;
+	}
+
+	.apf-tree .folder.close.over {
+		background: transparent url('../images/tree/folders.gif') no-repeat 0px -39px;
+	}
+
+	.apf-tree .folder.open {
+		background: transparent url('../images/tree/folders.gif') no-repeat 0px -59px;
+	}
+
+	.apf-tree .folder.open.over {
+		background: transparent url('../images/tree/folders.gif') no-repeat 0px -79px;
+	}
+
+/**
+ *
+ *	SELECTED NODE
+ *
+ */
+
+	.apf-tree li.selected,
+	.apf-tree li.selected.over {
+		background: none;
+		XXbackground: transparent url('../images/tree/folder_selected.gif') no-repeat 0px 0px !important;
+	}
+
+	.apf-tree span.selected,
+	.apf-tree span.selected.over {
+		color: #129cc6 !important;
+		font-weight: bold !important;
+		text-transform: uppercase;
+		background: none;
+		XXbackground: transparent url('../images/tree/folder_selected.gif') no-repeat top right !important;
+	}

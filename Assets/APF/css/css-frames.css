@@ -1,0 +1,462 @@
+/**
+ *	-------------------------------------------------------
+ *	APF - Basic "Frame" Layout
+ *
+ *	Create the top, bottom and center CSS Frames and
+ *	prepare the html/body
+ *	-------------------------------------------------------
+ */
+
+	html, body {
+		overflow : hidden !important;
+		font-family: Sans-Serif, Tahoma, Arial, Helvetica;
+		font-size: 1em;
+		min-height: 100%;
+		outline: none;
+		height: auto !important;
+	}
+
+	body {
+		background: #057bcc url('../images/layout/page_background.jpg') no-repeat top left;
+		height:100%;
+	}
+
+	a:link, a:visited {
+		color: #003388;
+	}
+
+	a:active, a:hover {
+		color: #338800;
+	}
+
+	.apf-border {
+		border: 1px solid #cdd3da;
+	}
+
+	.apf-border2 {
+		border: 1px solid #adb3ba;
+	}
+
+	.apf-border-notop {
+		border-top: 0 !important;
+	}
+
+	.apf-absolute {
+		position: absolute;
+	}
+
+	.apf-fullsize {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+	}
+
+	.apf-clipped {
+		position: absolute;
+		overflow: hidden !important;
+		}
+
+	.apf-overflow {
+		overflow: auto !important;
+		}
+
+	.apf-hidden {
+		visibility: hidden;
+		display: none;
+		}
+
+/**
+ *	-------------------------------------------------------
+ *	Basic Layout DIV's
+ *	-------------------------------------------------------
+ */
+
+	div.apf-header {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 117px;
+		background: transparent url('../images/layout/background_top.png') repeat-x 0px 55px;
+		}
+
+	div.apf-branding {
+		top: 12px;
+		left: 8px;
+		width: 129px;
+		height: 42px;
+		background: transparent url('../images/content/logo.png') no-repeat top left;
+	}
+
+	div.apf-navi {
+		position: absolute;
+		top: 66px;
+		left: 0px;
+		right: 0px;
+		height: 51px;
+		line-height: 35px;
+		font-size: 1em;
+		padding-left: 8px;
+		padding-right: 8px;
+		text-align: left;
+		text-transform: uppercase;
+		color: #1e395b;
+		background: #dce6f4 url('../images/layout/sprite_navigation.png') repeat-x 0px -140px;
+		z-index: 15 !important;
+		}
+
+	div.apf-column-left {
+		top: 117px;
+		left: 0px;
+		bottom: 48px;
+		width: 200px;
+		background: #ebf1f9 url('../images/layout/background_main.gif') repeat-x top left;
+		font-size: 0.88em;
+		}
+
+		div.apf-column-left .apf-inner {
+			position: absolute;
+			overflow: hidden !important;
+			margin-left: 4px;
+			background-color: white;
+			font-size: 0.88em;
+		}
+
+	div.apf-column-right {
+		top: 117px;
+		left: 200px;
+		right: 0px;
+		bottom: 48px;
+		background: #ebf1f9 url('../images/layout/background_main.gif') repeat-x top left;
+		font-size: 0.88em;
+		margin-left: 6px;
+		}
+
+		div.apf-column-right .apf-inner {
+			position: absolute;
+			overflow: auto;
+			margin-right: 4px;
+			font-size: 0.88em;
+			background: white url('../images/layout/sprite_navigation.png') repeat-x 0px -192px;
+		}
+
+	div.apf-column-right-top {
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 200px;
+		margin-bottom: 6px;
+		}
+
+		div.apf-column-right-top .apf-inner,
+		div.apf-column-right-bottom .apf-inner {
+			position: absolute;
+			overflow: auto;
+		}
+
+	div.apf-column-right-bottom {
+		top: 200px;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		margin-top: 6px;
+		}
+
+	div.apf-footer {
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		height: 48px;
+		background: #f5f8fa url('../images/layout/background_footer.gif') repeat-x top left;
+		font-size: 0.88em;
+		}
+
+		div.apf-footer .apf-inner {
+			position: absolute;
+			margin: 4px;
+			margin-top: 5px;
+			font-size: 0.88em;
+			color: #183b52;
+		}
+
+/**
+ *	-------------------------------------------------------
+ *	Drag-Handle Styles
+ *	-------------------------------------------------------
+ */
+
+	#APF_PageColumnDrag_handle {
+		top: 117px;
+		bottom: 48px;
+		left: 200px;
+	    width: 6px;
+	}
+
+	#APF_PageRowDrag_handle {
+		top: 200px;
+		right: 0px;
+		left: 0px;
+	    height: 6px;
+	}
+
+	div.handle {
+	    position: absolute;
+	    display: block;
+	    z-index: 5;
+	}
+	
+		div.handle.horizontal {
+		    top: 0;
+		    bottom: 0;
+		    width: 6px;
+			background: #ebf1f9 url('../images/layout/background_main.gif') repeat-x top left;
+		    cursor: col-resize;
+		}
+
+		div.handle.vertical {
+		    left: 0px;
+		    right: 0px;
+		    height: 6px;
+		    cursor: row-resize;
+		} 
+
+		div.handle.onDrag {
+		    background: none;
+		    background-color: #000000;
+		}
+
+/**
+ *	-------------------------------------------------------
+ *	Main Navigation Styles
+ *	-------------------------------------------------------
+ */
+
+	div.apf-navi a,
+	div.apf-navi a.activesub,
+	div.apf-navi a.active {
+		display: block;
+		color: #1e395b;
+		text-decoration: none;
+		height: 35px;
+		line-height: 34px;
+		padding-right: 16px;
+		overflow: hidden;
+	}
+
+	div.apf-navi a b,
+	div.apf-navi a.activesub b,
+	div.apf-navi a.active b {
+		display: block;
+		font-weight: normal;
+		font-size: 0.68em;
+		padding-left: 16px;
+	}
+
+	div.apf-navi a {
+		color: #607090;
+		background: transparent url('../images/layout/sprite_navigation.png') no-repeat top right;
+	}
+
+	div.apf-navi a b {
+		background: transparent url('../images/layout/sprite_navigation.png') no-repeat top left;
+	}
+
+	div.apf-navi a.moveover {
+		color: #102040;
+		background: transparent url('../images/layout/sprite_navigation.png') no-repeat right -35px;
+	}
+
+	div.apf-navi a.moveover b {
+		background: transparent url('../images/layout/sprite_navigation.png') no-repeat 0px -35px;
+	}
+
+	div.apf-navi a.active {
+		background: transparent url('../images/layout/sprite_navigation.png') no-repeat right -70px;
+		overflow: hidden;
+	}
+
+	div.apf-navi a.active b {
+		background: transparent url('../images/layout/sprite_navigation.png') no-repeat 0px -70px;
+	}
+
+	div.apf-navi a.activesub {
+		background: transparent url('../images/layout/sprite_navigation.png') no-repeat right -105px;
+		margin: 0px !important;
+	}
+
+	div.apf-navi a.activesub b {
+		line-height: 40px;
+		background: transparent url('../images/layout/sprite_navigation.png') no-repeat 0px -105px;
+		margin: 0px !important;
+		color: #12627a;
+		overflow: hidden;
+	}
+
+/**
+ *	-------------------------------------------------------
+ *	Main Navigation DropDown styles
+ *	-------------------------------------------------------
+ */
+
+	.apf-navi li {
+		float: left;
+	}
+
+	.apf-navi li li {
+		float: none;
+		clear: both;
+		background: none;
+	}
+
+	.apf-navi li.subnavi ul {
+		float: left;
+		top: 34px;
+		padding-bottom: 16px;
+		background: transparent url('../images/layout/dropdown_background.png') no-repeat bottom left;
+	}
+
+	.apf-navi li li a {
+		position: relative;
+		display: block;
+		font-size: 0.64em;
+		background: none;
+		height: 22px;
+		line-height: 22px;
+		padding-left: 12px;
+		margin: 2px;
+		margin-left: 6px;
+		margin-right: 5px;
+		overflow: hidden;
+		color: #90a5ac;
+	}
+
+	.apf-navi li li a:hover {
+		color: #12627a;
+		background: transparent url('../images/layout/dropdown_background_link.png') no-repeat 2px center;
+	}
+
+	.apf-navi li ul {
+		position: absolute;
+		width: 200px;
+		margin-left: -2560px;
+	}
+
+	.apf-navi .insight {
+		margin-left: 2px;
+	}
+
+	.apf-navi .dashline {
+		padding: 0px;
+		margin: 2px;
+		margin-left: 12px;
+		margin-right: 12px;
+	}
+	
+	.apf-navi b.dashline {
+		line-height: 24px;
+		font-size: 0.72em;
+		border-bottom: 1px dashed #d0d0d0;
+		height: auto !important;
+		overflow: auto !important;
+		display: block;
+		padding: 0 !important;
+		margin: 0px !important;
+		margin-left: 12px !important;
+		margin-right: 12px !important;
+
+		padding-left: 6px !important;
+		padding-right: 6px !important;
+
+	}
+
+/**
+ *	-------------------------------------------------------
+ *	APF - Left Col Accordion
+ *	-------------------------------------------------------
+ */
+
+	#area {
+		overflow: hidden !important;
+		display: none;
+		visibility: hidden;
+	}
+
+	.apf-area-toggler {
+		overflow: hidden !important;
+		cursor:pointer;
+		font-weight: normal;
+		margin: 0;
+		font-size: 1.0em;
+		height: 27px;
+		line-height: 27px;
+		padding-left: 4px;
+		background: transparent url('../images/layout/accordion.gif') repeat-x 0px 0px;
+		text-align: left;
+		color: #1e395b;
+	}
+
+	.apf-area-toggler:hover {
+		color: #a30000;
+	}
+
+	.apf-area-toggler.active {
+		background: transparent url('../images/layout/accordion.gif') repeat-x 0px 0px;
+		color: #2b890e;
+		border-bottom: 1px solid #cdd3da;
+	}
+
+	.apf-area {
+		overflow: hidden !important;
+		position: relative;
+		visibility: hidden;
+		background: white url('../images/layout/sprite_navigation.png') repeat-x 0px -192px;
+		height: 0px;
+		display: none;
+		}
+
+	.apf-area.active {
+		visibility: visible;
+		display: block;
+		}
+
+
+/**
+ *	-------------------------------------------------------
+ *	APF - Progress-Bar
+ *	-------------------------------------------------------
+ */
+
+	.apf-progress div.bar {
+		top: 2px;
+		width: 139px;
+		height: 10px;
+		left: 128px;
+		background: transparent url('../images/layout/progress.png') repeat-x 0px -10px;
+	}
+
+	.apf-progress div.bar div.progress {
+		top: 0px;
+		width: 0px;
+		height: 10px;
+		left: 0px;
+		background: transparent url('../images/layout/progress.png') repeat-x 0px 0px;
+	}
+
+	.apf-progress-loading {
+		top: 76px;
+		right: 4px;
+		width: 264px;
+		height: 14px;
+		background: transparent url('../images/layout/sprite_navigation.png') repeat-x 0px -192px;
+		font-size: 0.56em;
+		line-height: 15px;
+		text-transform: uppercase;
+		padding-left: 4px;
+		color: #63b7e5;
+		z-index: 20;
+	}
+
+	.apf-progress-loading b {
+		color: #0673ab;
+	}
+

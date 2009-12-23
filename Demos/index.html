@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+	<head>
+<!--
+	 ___  ___ ___  ___  ___  __   __    __________________________
+	    ||       ||   ||   ||    |     |                          |
+	 ___||       ||   ||___||___ |___  |   Artness PHPFramework   :
+	|   ||       ||   ||        |    | | (C) 2008-2009 Artness.de .
+	|___||       ||   ||___  ___| ___| |                           
+	 __________________________________| Programming : Timo Henke .
+	|
+	| Page rendered in : 0.28600311 seconds @ 2009-12-23 13:26:18
+	|_____ ____ ___ __ _  _   _    _
+//-->
+		<title>Seitentitel</title>
+		<meta http-equiv="content-language" content="de" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta name="keywords" content="Keywords" />
+		<meta name="description" content="Description" />
+		<meta name="robots" content="index, follow" />
+		<meta http-equiv="MSThemeCompatible" content="Yes" />
+		<meta name="MSSmartTagsPreventParsing" content="TRUE" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<link rel="stylesheet" href="../Assets/APF/css/main.css" type="text/css" media="screen" />
+		<script type="text/javascript">
+			var APF_THEME = '../Assets/APF/', APF_IMAGES = '../Assets/APF/images/';
+		</script>
+		<script type="text/javascript" src="../Demos/apfJS.php?2-0-9-1"></script>
+
+	</head>
+<body>
+		<div id="ajax_progress" class="apf-border2 apf-progress apf-clipped apf-progress-loading">
+			<b>Loading</b> ... please wait
+			<div class="apf-clipped bar">
+				<div class="apf-clipped progress"><!-- --></div>
+			</div>
+		</div>
+	<div id="APF_PageHeader" class="apf-header apf-clipped"><!-- --></div>
+
+	<div id="APF_Branding" class="apf-branding apf-clipped"><!-- --></div>
+	<div id="APF_PageNav" class="apf-navi">
+		<ul>
+			<li class="subnavi">
+				<a href="#" class="sub active" class="active"><b>Progress-Bar</b></a>
+				<ul>
+					<li><b class="dashline">Percentage</b></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.set(0)">Set Progressbar to 0%</a></li>
+
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.set(12.5)">Set Progressbar to 12.5%</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.set(25)">Set Progressbar to 25%</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.set(50)">Set Progressbar to 50%</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.set(100)">Set Progressbar to 100%</a></li>
+
+					<li><b class="dashline">Stepping</b></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(1,10)">Set Progressbar: 1/10</a></li>
+
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(2,10)">Set Progressbar: 2/10</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(4,10)">Set Progressbar: 4/10</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(6,10)">Set Progressbar: 6/10</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(10,10)">Set Progressbar: 10/10</a></li>
+
+					<li><b class="dashline">Value / Max value</b></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(1234,5000)">1234 / 5000</a></li>
+
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(2345,5000)">2345 / 5000</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(3456,5000)">3456 / 5000</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(4567,5000)">4567 / 5000</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Progress.Loading.setStep(5678,5000)">5678 / 5000 (cut at max)</a></li>
+
+				</ul>
+			</li>
+
+			<li class="subnavi">
+				<a href="#" class="sub"><b>Areas</b></a>
+				<ul>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Areas.LeftNav.removeArea(0)">Remove Area 0</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Areas.LeftNav.removeArea(1)">Remove Area 1</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Areas.LeftNav.removeArea(2)">Remove Area 2</a></li>
+					<li><a href="javascript: void(0)" onClick="APF.Objects.Areas.LeftNav.addArea('Hello World',$('apf-about').get('html'))">Add new Area</a></li>
+
+				</ul>
+			</li>
+			<li class="subnavi">
+				<a href="#" class="sub"><b>Main Nav 3 - with SUB</b></a>
+				<ul>
+					<li><a href="#" class="sub">Sub-Navi 1</a></li>
+				</ul>
+			</li>
+
+			<li><a href="#"><b>Main Nav 4 - NO SUB</b></a></li>
+			<li><a href="#"><b>Main Nav 5 - NO SUB</b></a></li>
+		</ul>
+	</div>
+
+	<div id="APF_PageColumnLeft" class="apf-column-left apf-clipped">
+		<div class="apf-inner apf-border apf-fullsize apf-border-notop">
+			<div id="myArea" class="apf-absolute apf-fullsize">
+
+				<h3 class="apf-area-toggler">Toggler 1</h3>
+				<div class="apf-area">
+					<div id="MailBox" class="apf-tree apf-absolute apf-fullsize apf-overflow pad4">
+						<ul>
+							<li><a class="folder" href="#" rel="APF_Content_Right_Top::Rootfolder 1"><span>Rootfolder 1</span></a>
+								<ul>
+									<li><a class="folder" href="#" rel="APF_Content_Right_Top::Subfolder 1"><span>Subfolder 1</span></a></li>
+									<li><a class="folder" href="#" rel="APF_Content_Right_Top::Subfolder 2"><span>Subfolder 2</span></a></li>
+									<li><a class="folder" href="#" rel="APF_Content_Right_Top::Subfolder 3"><span>Subfolder 3</span></a></li>
+								</ul>
+							</li>
+							<li><a class="folder" href="#" rel="APF_Content_Right_Top::Rootfolder 1"><span>Rootfolder 2</span></a>
+								<ul>
+									<li><a class="folder" href="#" rel="APF_Content_Right_Top::Subfolder 1"><span>Subfolder 1</span></a></li>
+									<li><a class="folder" href="#" rel="APF_Content_Right_Top::Subfolder 2"><span>Subfolder 2</span></a></li>
+									<li><a class="folder" href="#" rel="APF_Content_Right_Top::Sub-Rootfolder 1"><span>Sub-Rootfolder 1</span></a>
+										<ul>
+											<li><a class="folder" href="#" rel="APF_Content_Right_Top::Subfolder 1"><span>Subfolder 1</span></a></li>
+											<li><a class="folder" href="#" rel="APF_Content_Right_Top::Subfolder 2"><span>Subfolder 2</span></a></li>
+											<li><a class="folder" href="#" rel="APF_Content_Right_Top::Subfolder 3"><span>Subfolder 3</span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<h3 class="apf-area-toggler">Toggler 2</h3>
+				<div class="apf-area">
+					<div class="apf-absolute apf-fullsize apf-overflow pad4">
+						Demo Content
+					</div>
+				</div>
+
+				<h3 class="apf-area-toggler">Toggler 3</h3>
+				<div class="apf-area">
+					<div class="apf-absolute apf-fullsize apf-overflow pad4">
+						some simple content
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="APF_PageColumnDrag_handle" class="handle horizontal"><!-- --></div>
+
+	<div id="APF_PageColumnRight" class="apf-column-right apf-clipped">
+
+		<div class="apf-column-right-top apf-clipped apf-overflow">
+			<div class="apf-inner apf-border apf-fullsize pad4">
+				<div id="APF_Content_Right_Top" class="apf-fullsize">
+				</div>
+			</div>
+
+		</div>
+
+		<div id="APF_PageRowDrag_handle" class="handle vertical"><!-- --></div>
+
+		<div class="apf-column-right-bottom apf-clipped apf-overflow">
+			<div class="apf-inner apf-border apf-fullsize">
+				<div id="APF_Content_Right_Bottom" class="apf-fullsize pad4">
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+	<div id="apf-about" class="apf-hidden">
+		<h1>DEPECHE</h1>
+		Depeche is a PHP based Web-System using the APF-PHP Framework, both developed by Timo Henke / Artness.<br>
+		<br>
+
+		Depeche will keep all your Mail and Organizer Stuff.
+	</div>
+
+	<div id="APF_PageFooter" class="apf-footer apf-clipped">
+		<div class="apf-inner apf-fullsize pad4">
+			<a title="About Depeche" rel="CB::400::200::inline::apf-about" href="javascript: void(0)" onClick="void(0)">About</a> | <a title="Titeltext" rel="CB::640::320::inline::APF_Content_Right_Bottom" href="javascript: void(0)">Show some inline</a>
+		</div>
+	</div>
+
+</body>
+</html>

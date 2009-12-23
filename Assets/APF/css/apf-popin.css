@@ -1,0 +1,103 @@
+/**
+ *	-------------------------------------------------------
+ *	APF - Overay PopIn
+ *	-------------------------------------------------------
+ *
+ */
+
+	#CB_Overlay {
+		position: absolute;
+		overflow:hidden;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		z-index: 100;
+		background: #4487c2 url('../images/layout/overlay_background.jpg') no-repeat center center;
+		cursor: pointer;
+	}
+	
+	#CB_OverlayIframe {
+		position: absolute;
+		overflow:hidden;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		z-index: 99;
+		background-color: #fff;
+		border:none;
+	}
+
+	#CB_Window {
+		position: absolute;
+		overflow:hidden;
+		top: 0px;
+		left: 0px;
+		z-index: 1000;
+	}
+
+	#CB_Window_Inner {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		bottom: 11px;
+		right: 10px;
+		z-index: 999;
+		background-color: white;
+	}
+
+	#CB_Window_Content {
+		position: absolute;
+		top: 36px;
+		left: 4px;
+		bottom: 4px;
+		right: 4px;
+		z-index: 999;
+		background-color: #f0f8fa;
+		border: 1px solid #eaeaef;
+	}
+
+	#CB_Headline {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 30px;
+		line-height: 30px;
+		padding-left: 8px;
+		background: #dce6f4 url('../images/layout/sprite_navigation.png') repeat-x 0px -2px;
+		text-shadow: #ffffff 0px 1px 1px;
+		border-bottom: 1px solid #b0c0e0;
+	}
+
+	#CB_Close {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 31px;
+		height: 31px;
+		line-height: 31px;
+		text-align: center;
+		cursor: pointer;
+		text-shadow: #ffffff 0px 1px 1px;
+	}
+
+	#CB_Content {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		left: 0px;
+		bottom: 0px;
+		padding: 4px;
+		overflow: auto;
+		font-size: 0.72em;
+	}
+
+	#CB_Content h1 {
+		font-size: 1.3em;
+		color: #223355;
+		margin-bottom: 4px;
+		padding-bottom: 4px;
+		border-bottom: 1px dashed #d0d0d0;
+	}

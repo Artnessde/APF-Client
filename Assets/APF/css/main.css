@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@import url("defaults.css");
+@import url("css-frames.css");
+@import url("tree.css");
+@import url("apf-popin.css");
+
+/**
+ *	-------------------------------------------------------
+ *	APF - Basic "Frame" Layout
+ *
+ *	Additional stylings
+ *	-------------------------------------------------------
+ *
+ */
+
+	div.dashline {
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px dashed #d0d0d0;
+		height: 1px !important;
+		overflow: hidden;
+	}
+
+	.pad4 {
+		padding: 4px !important;
+	}
+
+	.nooverflow {
+		overflow: hidden !important;
+	}
+
+	.v-top {
+		vertical-align:top;
+	}
+	
+	.v-mid {
+		vertical-align:middle;
+	}
+	
+	.v-bottom {
+		vertical-align:bottom;
+	}
+	
+	.a-left {
+		text-align:left;
+	}
+	
+	.a-center {
+		text-align:center;
+	}
+	
+	.a-right {
+		text-align:right;
+	}
